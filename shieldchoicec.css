@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: auto;
+    padding: 0;
+    background-image: url('img/backg.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow-x: hidden; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    max-width: 100vw; 
+    overflow: hidden; 
+}
+
+header img {
+    height: 100%;
+    margin-right: auto;
+    padding-left: 20px;
+    transition: 0.5s;
+    align-self: center;
+}
+
+header {
+    display: flex;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    justify-content: end;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    z-index: 10;
+}
+
+main header .homie {
+    height: 50%;
+    width: auto;
+    align-self: center;
+    justify-self: center;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header button {
+    background-color: rgba(255, 255, 255, 0);
+    height: 100%;
+    width: 15%;
+    border: 0;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.5s;
+    max-width: 100vw;
+}
+
+main .uutama {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw; 
+}
+main .uutama .start .bagtanya{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10%;
+ }
+ main .uutama .start .bagjawab{
+    padding: 10%;
+    width: 50%;
+    grid-gap: 5px;
+  }
+main .uutama .start{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 82%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+#tanyaa {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.taros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.taro {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.jawaban {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.answer {
+    width: 100px;
+    height: 100px;
+    background-color: #123064;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+main .uutama .buttonawal{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main .uutama .start .pilihann1 .btn1:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px);
+}
+
+main .uutama .start .pilihann1 .btn1:active {
+    transform: translateY(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+main .uutama .start .pilihann2 .btn2:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px);
+}
+
+main .uutama .start .pilihann2 .btn2:active {
+    transform: translateY(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+header button:hover{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2); 
+}
+header button:active{
+    transform: translateY(2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.uutama main .start .pilihann1 .btn1:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px);
+}
+
+.uutama .buttonawal .btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+main .uutama .start .pilihann1 img:hover{
+    transform: translateY(10px);
+    filter: drop-shadow(10px 10px 40px rgb(248, 248, 248));
+}
+main .uutama .start .pilihann2 img:hover{
+    transform: translateY(10px);
+    filter: drop-shadow(10px 10px 40px rgb(248, 248, 248));
+}
+@media (max-width: 768px) {
+   
+    header {
+        height: 15%; 
+    }
+
+    header h1 {
+        font-size: 16px; 
+        margin-right: 10px; 
+    }
+
+    header img {
+        height: auto; 
+        max-height: 50px; 
+        padding-left: 10px; 
+    }
+
+}
+

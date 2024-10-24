@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: auto;
+    padding: 0;
+    background-image: url('img/backg.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow-x: hidden; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    max-width: 100vw; 
+    overflow: hidden; 
+}
+
+header img {
+    height: 100%;
+    margin-right: auto;
+    padding-left: 20px;
+    transition: 0.5s;
+    align-self: center;
+}
+
+header {
+    display: flex;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3); 
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px);
+    justify-content: end;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+    z-index: 10;
+}
+
+main header .homie {
+    height: 50%;
+    width: auto;
+    align-self: center;
+    justify-self: center;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header button {
+    background-color: rgba(255, 255, 255, 0);
+    height: 100%;
+    width: 15%;
+    border: 0;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.5s;
+    max-width: 100vw;
+}
+
+main .uutama {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw; 
+}
+
+
+main .uutama .start {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 82%;
+    align-items: center;
+    position: relative;
+    overflow: hidden; 
+}
+
+
+main .uutama .start img {
+    margin: 10%;
+    width: 65%;
+    height: auto;
+    max-width: 100vw;
+    opacity: 0;
+    transition: transform 1.1s ease-in-out, opacity 1s ease-in-out; 
+    transform: translate(100%,-20%);
+    z-index: 1;
+}
+
+main .uutama .start img.active {
+    opacity: 1; 
+    transform: translate(0,-20%); 
+}
+
+main .uutama .start p.active {
+    opacity: 1;
+    transform: translate(0,90%);
+}
+
+main .uutama .start p.inactive {
+    opacity: 0;
+}
+
+main .uutama .start img.inactive {
+    opacity: 0;
+    transform: translate(-100%,-20%);
+}
+
+main .uutama .start p {
+    position: absolute;
+    font-size: 44px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    width: 50%;
+    z-index: 3;
+    opacity: 0; 
+    transition: transform 1.1s ease-in-out, opacity 1.1s ease-in-out; 
+    transform: translate(120%,90%);
+    max-width: 100vw;
+}
+
+
+
+main .uutama .buttonawal{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uutama .buttonawal .btn {
+    height: 64px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.3); 
+    border: 1px solid grey(255, 255, 255, 0.3); 
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: black;
+    font-size: 22px;
+    border-radius: 12px; 
+    transition: all 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;  
+}
+
+.uutama .buttonawal .btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px);
+}
+
+.uutama .buttonawal .btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+main .uutama .start img:hover{
+    filter: drop-shadow(2px 2px 3px black);
+}
+
+header button:hover{
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 24px rgba(0, 0, 0, 0.2); 
+}
+header button:active{
+    transform: translateY(2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img:hover{
+    transform: translateY(5px);
+    filter: drop-shadow(10px 10px 400px rgb(248, 248, 248));
+}
+header img:active{
+    transform: translateY(2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between; /* Mengatur agar elemen lebih terdistribusi */
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+    * {
+        box-sizing: border-box; /* Pastikan semua elemen menghitung padding dan border */
+    }
+    body {
+        margin: 0;
+        height: auto;
+        padding: 0;
+        background-image: url('img/backg.png');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        overflow-x: hidden; /* Hilangkan scroll horizontal */
+    }
+    
+
+    header button {
+        width: 20%; /* Tombol lebih besar di layar kecil */
+        font-size: 16px;
+    }
+
+    main header img {
+        height: 90%;
+        padding-left: 10px; /* Lebih kecil di layar mobile */
+    }
+
+    main {
+       height: 92%;
+       width: 100%;
+       
+    }
+
+    main .uutama .start img {
+        margin: 10%;
+        width: 65%;
+        height: auto;
+        max-width: 100vw;
+        opacity: 0;
+        transition: transform 1.1s ease-in-out, opacity 1s ease-in-out; 
+        transform: translate(100%,-600%);
+        z-index: 1;
+    }
+
+    main .uutama .start p {
+        font-size: 24px; /* Ubah ukuran font agar lebih kecil di layar kecil */
+        width: 70%; /* Perluas paragraf untuk layar lebih kecil */
+    }
+
+    .uutama .buttonawal .btn {
+        width: 100%; /* Tombol lebih lebar di layar kecil */
+        font-size: 18px; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+}
+
+
